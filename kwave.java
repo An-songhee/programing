@@ -1,4 +1,4 @@
-package jj01;
+package jj01; //원하는 나라를 검색하면 그 나라의 한류 현황을 알 수 있는 프로그램
 import java.util.*;
 public class kwave {
 
