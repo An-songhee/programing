@@ -3,46 +3,46 @@ import java.util.*;
 public class kwave {
 
 		public static void main(String[] args) {
-			// ¿µ¾î ´Ü¾î¿Í ÇÑ±Û ´Ü¾îÀÇ ½ÖÀ» ÀúÀåÇÏ´Â HashMap ÄÃ·º¼Ç »ı¼º
+			// ì˜ì–´ ë‹¨ì–´ì™€ í•œê¸€ ë‹¨ì–´ì˜ ìŒì„ ì €ì¥í•˜ëŠ” HashMap ì»¬ë ‰ì…˜ ìƒì„±
 			Map<String, String> dic = new HashMap<String, String>();
 			
-			// 3 °³ÀÇ (key, value) ½ÖÀ» dic¿¡ ÀúÀå
-			dic.put("japan", "K-POPÀ½¿ø ½ÃÀå 2.7Á¶¿ø ±Ô¸ğ, ³İÇÃ¸¯½º¸¦ ÅëÇÑ ÀÌÅÂ¿øÅ¬¶ó¾², »ç¶ûÀÇ ºÒ½ÃÂø ¿­Ç³"); // "³ª¶ó"´Â key, "ÇÑ·ù ÇöÈ²"Àº value
-			dic.put("china", "K-POP±×·ì ¾Ù¹ü ÃÖ´ë ±¸¸Å·Â, º°¿¡¼­¿Â±×´ë·Î ÀÎÇÑ Ä¡Å² ¿­Ç³"); 
-			dic.put("thai", "ÇÑ±¹ µå¶ó¸¶ ÀÎ±â¸¦ ÅëÇÑ ¸¹Àº µå¶ó¸¶ ¸®¸ŞÀÌÅ©, ÇÑ±¹ ÃÖ´ë À½¾Ç ½Ã»ó½Ä 2022 MAMA ÅÂ±¹ °³ÃÖ ¿¹Á¤");	
-			dic.put("America", "¿µÈ­ '±â»ıÃæ' ¾ÆÄ«µ¥¹Ì ½Ã»ó½Ä 4°ü¿Õ ¼ö»ó, ¹æÅº¼Ò³â´Ü ¹Ì±¹ ½Ã»ó½Ä AMA °ø¿¬, ºôº¸µå Å¾ ¹é¿¡ K-POP°î Â÷Æ®ÀÎ");
+			// 3 ê°œì˜ (key, value) ìŒì„ dicì— ì €ì¥
+			dic.put("japan", "K-POPìŒì› ì‹œì¥ 2.7ì¡°ì› ê·œëª¨, ë„·í”Œë¦­ìŠ¤ë¥¼ í†µí•œ ì´íƒœì›í´ë¼ì“°, ì‚¬ë‘ì˜ ë¶ˆì‹œì°© ì—´í’"); // "ë‚˜ë¼"ëŠ” key, "í•œë¥˜ í˜„í™©"ì€ value
+			dic.put("china", "K-POPê·¸ë£¹ ì•¨ë²” ìµœëŒ€ êµ¬ë§¤ë ¥, ë³„ì—ì„œì˜¨ê·¸ëŒ€ë¡œ ì¸í•œ ì¹˜í‚¨ ì—´í’"); 
+			dic.put("thai", "í•œêµ­ ë“œë¼ë§ˆ ì¸ê¸°ë¥¼ í†µí•œ ë§ì€ ë“œë¼ë§ˆ ë¦¬ë©”ì´í¬, í•œêµ­ ìµœëŒ€ ìŒì•… ì‹œìƒì‹ 2022 MAMA íƒœêµ­ ê°œìµœ ì˜ˆì •");	
+			dic.put("America", "ì˜í™” 'ê¸°ìƒì¶©' ì•„ì¹´ë°ë¯¸ ì‹œìƒì‹ 4ê´€ì™• ìˆ˜ìƒ, ë°©íƒ„ì†Œë…„ë‹¨ ë¯¸êµ­ ì‹œìƒì‹ AMA ê³µì—°, ë¹Œë³´ë“œ íƒ‘ ë°±ì— K-POPê³¡ ì°¨íŠ¸ì¸");
 
-			// ³ª¶ó¸¦ ÀÔ·Â¹Ş°í ÀÌ¿¡µû¸¥ value °Ë»ö. "exit" ÀÔ·Â¹ŞÀ¸¸é Á¾·á
+			// ë‚˜ë¼ë¥¼ ì…ë ¥ë°›ê³  ì´ì—ë”°ë¥¸ value ê²€ìƒ‰. "exit" ì…ë ¥ë°›ìœ¼ë©´ ì¢…ë£Œ
 			Scanner scanner = new Scanner(System.in);
-			String[] name= new String[5]; //ÀÔ·Â¹ŞÀº ³ª¶ó¸¦ ÀúÀåÇÒ ¹è¿­
-			int count=0; //¹è¿­¿¡ index¿¡ µû¸¥ ÀúÀåÀ» À§ÇÑ ¼ıÀÚ
+			String[] name= new String[5]; //ì…ë ¥ë°›ì€ ë‚˜ë¼ë¥¼ ì €ì¥í•  ë°°ì—´
+			int count=0; //ë°°ì—´ì— indexì— ë”°ë¥¸ ì €ì¥ì„ ìœ„í•œ ìˆ«ì
 			while(true) {
 				
-				System.out.print("¿µ¾î·Î ³ª¶ó¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä"?");
+				System.out.print("ì˜ì–´ë¡œ ë‚˜ë¼ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”?");
 				String eng = scanner.next(); 
 			
 				
 				if(eng.equals("exit")) {
-					System.out.println("Áö±İ±îÁö °Ë»öÇÑ ³ª¶ó ±æÀÌÀÔ´Ï´Ù" + name.length );
-					System.out.println("Á¾·áÇÕ´Ï´Ù");
+					System.out.println("ì§€ê¸ˆê¹Œì§€ ê²€ìƒ‰í•œ ë‚˜ë¼ ê¸¸ì´ì…ë‹ˆë‹¤" + name.length );
+					System.out.println("ì¢…ë£Œí•©ë‹ˆë‹¤");
 					break;}	
-				// ÇØ½Ã¸Ê¿¡¼­ 'Å°' engÀÇ '°ª' kor °Ë»ö
+				// í•´ì‹œë§µì—ì„œ 'í‚¤' engì˜ 'ê°’' kor ê²€ìƒ‰
 				String kor = dic.get(eng);
 				
 				if( kor == null) 
-					paint(new notexist()); //Á¸ÀçÇÏÁö¾ÊÀ¸¸é ÇØ´ç Å¬·¡½º È£Ãâ
+					paint(new notexist()); //ì¡´ì¬í•˜ì§€ì•Šìœ¼ë©´ í•´ë‹¹ í´ë˜ìŠ¤ í˜¸ì¶œ
 					
 	
 				else { 
-					eng = name[count]; //¹è¿­¿¡ ÀúÀå
-					System.out.println(kor); //ÇØ´ç ³ª¶ó ÇöÈ² Ãâ·Â
-					paint(new lo()); // ÇØ´ç Å¬·¡½º È£Ãâ
+					eng = name[count]; //ë°°ì—´ì— ì €ì¥
+					System.out.println(kor); //í•´ë‹¹ ë‚˜ë¼ í˜„í™© ì¶œë ¥
+					paint(new lo()); // í•´ë‹¹ í´ë˜ìŠ¤ í˜¸ì¶œ
 					count = count+1;}	
 			
 
 			}}
 				
-		public static void paint(lo s) {s.show(); } //°¢ paintÀÇ ¾Ë¸ÂÀº ¹®±¸ È£Ãâ
+		public static void paint(lo s) {s.show(); } //ê° paintì˜ ì•Œë§ì€ ë¬¸êµ¬ í˜¸ì¶œ
 			
 	
 }
